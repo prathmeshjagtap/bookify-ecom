@@ -1,13 +1,71 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://easyui-library.netlify.app/styles/component.css");
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	/* Colors */
+
+	--text-background-color: #2a284083;
+
+	--nav-color: #292929;
+
+	/* Margin variables */
+	--margin-px-s: 1px;
+	--margin-px-m: 2px;
+	--margin-px-l: 4px;
+	--margin-rem-s: 1rem;
+	--margin-rem-m: 2rem;
+	--margin-rem-l: 4rem;
+
+	/* Padding Style Variables */
+
+	--padding-px-s: 1px;
+	--padding-px-m: 2px;
+	--padding-px-l: 4px;
+	--padding-rem-s: 1rem;
+	--padding-rem-m: 2rem;
+	--padding-rem-l: 4rem;
+
+	/* Gap Style Variables */
+
+	--gap-sm: 1rem;
+
+	--gap-m: 2rem;
+
+	--gap-lg: 4rem;
+
+	/* Z-index variables */
+
+	--z-index-s: 1;
+
+	--z-index-m: 2;
+
+	--z-index-lg: 3;
+
+	--z-index-xl: 4;
+
+	--z-index-xxl: 5;
+
+	/* Border Radius  */
+
+	--border-radius-s: 5px;
+	--border-radius-m: 8px;
+	--border-radius-round: 50%;
+}
+a {
+	text-decoration: none;
+	color: var(--text-color);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+li {
+	list-style: none;
+}
+
+i {
+	cursor: pointer;
 }
