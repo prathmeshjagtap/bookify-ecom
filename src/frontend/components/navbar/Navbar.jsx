@@ -1,5 +1,5 @@
 import React from "react";
-import "./Navbar.css";
+import "./navbar.css";
 import Logo from "../../assets/Logo.svg";
 import { Link } from "react-router-dom";
 
@@ -24,19 +24,19 @@ function Navbar() {
 							<button className="btn btn-primary">Login</button>
 						</Link>
 
-						<Link to="/WishList" class="badge__container">
+						<Link to="/WishList" className="badge__container">
 							<i className="far fa-heart Navigation__icon "></i>
 							<div className="badge_count">10</div>
 						</Link>
-						<Link to="/Cart" class="badge__container">
+						<Link to="/Cart" className="badge__container">
 							<i className="fas fa-shopping-cart Navigation__icon "></i>
 							<div className="badge_count">0</div>
 						</Link>
 					</ul>
 				</div>
-				<div class="search__mobile">
-					<input class="input" placeholder="Search For items" />
-					<i class="fa fa-search search__icon"></i>
+				<div className="search__mobile">
+					<input className="input" placeholder="Search For items" />
+					<i className="fa fa-search search__icon"></i>
 				</div>
 			</nav>
 		</div>

@@ -18,6 +18,9 @@
 .navigation__component {
 	background-color: var(--background-color);
 	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	position: fixed;
+	top: 0;
+	left: 0;
 }
 .nav__search,
 .search__mobile {
