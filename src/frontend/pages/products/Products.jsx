@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, ProductCard } from "../../components";
+import { useFilter } from "../../contexts";
+import { sortbyPriceFunction } from "../../utils/filters";
 import { Filters } from "./Filters";
 import "./products.css";
 
@@ -7,6 +9,7 @@ const axios = require("axios").default;
 
 function Products() {
 	const [products, setProducts] = useState([]);
+	const { state } = useFilter();
 
 	useEffect(() => {
 		(async () => {
@@ -21,6 +24,8 @@ function Products() {
 		})();
 	}, []);
 
+	const data = sortbyPriceFunction(state, products);
+
 	return (
 		<div>
 			<Navbar />
@@ -31,8 +36,8 @@ function Products() {
 						Showing All {products && products.length} Products
 					</h1>
 					<div className="products">
-						{products &&
-							products.map((product) => (
+						{data &&
+							data.map((product) => (
 								<ProductCard key={product.id} product={product} />
 							))}
 					</div>

@@ -1,7 +1,11 @@
 import React from "react";
-import "./Products.css";
+import "./products.css";
+import { useFilter } from "../../contexts";
+import { filterAction } from "../../reducer";
 
 function Filters() {
+	const { dispatch } = useFilter();
+
 	return (
 		<div>
 			<aside className="aside__left">
@@ -64,11 +68,31 @@ function Filters() {
 				<ul className="aside__list">
 					<h1 className="filter__heading">Sort By</h1>
 					<li>
-						<input type="radio" id="lowtoHigh" name="sortby" />
+						<input
+							type="radio"
+							id="lowtoHigh"
+							name="sortby"
+							onChange={() =>
+								dispatch({
+									type: filterAction.SORT_BY_PRICE,
+									payload: "LOW_TO_HIGH",
+								})
+							}
+						/>
 						<label>Price- Low to High</label>
 					</li>
 					<li>
-						<input type="radio" id="hightoLow" name="sortby" />
+						<input
+							type="radio"
+							id="hightoLow"
+							name="sortby"
+							onChange={() =>
+								dispatch({
+									type: filterAction.SORT_BY_PRICE,
+									payload: "HIGH_TO_LOW",
+								})
+							}
+						/>
 						<label>Price- High to Low</label>
 					</li>
 				</ul>
