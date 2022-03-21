@@ -1,6 +1,15 @@
 import "./App.css";
-import { Products, WishList, Cart, Home, Login } from "./frontend/pages";
+import {
+	Products,
+	WishList,
+	Cart,
+	Home,
+	Login,
+	Signup,
+} from "./frontend/pages";
 import { Routes, Route, Link } from "react-router-dom";
+import Mockman from "mockman-js";
+import { FilterProvider } from "./frontend/contexts";
 
 function App() {
 	return (
@@ -11,10 +20,9 @@ function App() {
 				<Route path="/Cart" element={<Cart />} />
 				<Route path="/WishList" element={<WishList />} />
 				<Route path="/Login" element={<Login />} />
+				<Route path="/Signup" element={<Signup />} />
+				<Route path="/mockman" element={<Mockman />} />
 			</Routes>
-			<Link to="/">Home</Link> | <Link to="/products">Products</Link> |
-			<Link to="/Cart">Cart</Link> | <Link to="/WishList">WishList</Link> |
-			<Link to="/Login">Login</Link>
 		</div>
 	);
 }
